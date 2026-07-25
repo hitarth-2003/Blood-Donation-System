@@ -1,31 +1,199 @@
-html {
-  font-size: 14px;
+/* ==========================
+   GENERAL
+========================== */
+
+body{
+    background:#f8f9fa;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+main{
+    min-height:80vh;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar-brand{
+    font-size:28px;
+    font-weight:bold;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.nav-link{
+    font-size:17px;
+    margin-left:10px;
+    transition:.3s;
 }
 
-body {
-  margin-bottom: 60px;
+.nav-link:hover{
+    color:#ffd6d6 !important;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* ==========================
+   HERO
+========================== */
+
+.hero-section{
+    padding:70px 0;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+.hero-section h1{
+    font-size:55px;
+    font-weight:bold;
+}
+
+.hero-section p{
+    font-size:20px;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.btn-danger{
+    border-radius:30px;
+    padding:10px 25px;
+}
+
+.btn-dark{
+    border-radius:30px;
+}
+
+.btn-light{
+    border-radius:30px;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.card{
+    border:none;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+
+/* ==========================
+   TABLE
+========================== */
+
+.table{
+
+    background:white;
+
+}
+
+.table th{
+
+    text-align:center;
+
+}
+
+.table td{
+
+    vertical-align:middle;
+
+}
+
+/* ==========================
+   FORM
+========================== */
+
+.form-control{
+
+    border-radius:10px;
+
+}
+
+.form-select{
+
+    border-radius:10px;
+
+}
+
+textarea{
+
+    resize:none;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    margin-top:70px;
+
+}
+
+footer h5{
+
+    font-weight:bold;
+
+}
+
+/* ==========================
+   IMAGE
+========================== */
+
+img{
+
+    border-radius:15px;
+
+}
+
+/* ==========================
+   SECTION TITLE
+========================== */
+
+.section-title{
+
+    font-weight:bold;
+
+    color:#dc3545;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================
+   DASHBOARD CARDS
+========================== */
+
+.dashboard-card{
+
+    padding:30px;
+
+    text-align:center;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.hero-section h1{
+
+font-size:38px;
+
+}
+
+.hero-section{
+
+text-align:center;
+
+}
+
 }
