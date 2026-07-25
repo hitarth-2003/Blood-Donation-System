@@ -4,37 +4,166 @@
 
 <div class="container py-5">
 
-    <div class="text-center mb-4">
-        <h1 class="text-danger fw-bold">Find Blood Donor</h1>
+    <div class="text-center mb-5">
+
+        <h1 class="text-danger fw-bold">
+            Search Blood Donor
+        </h1>
+
+        <p class="lead">
+            Find blood donors by blood group and city.
+        </p>
+
     </div>
 
-    <div class="card shadow p-4">
+    <div class="card shadow-lg">
 
-        <div class="row">
+        <div class="card-header bg-danger text-white">
 
-            <div class="col-md-5">
-                <select class="form-select">
-                    <option>Select Blood Group</option>
-                    <option>A+</option>
-                    <option>A-</option>
-                    <option>B+</option>
-                    <option>B-</option>
-                    <option>AB+</option>
-                    <option>AB-</option>
-                    <option>O+</option>
-                    <option>O-</option>
-                </select>
-            </div>
+            <h4 class="mb-0">
+                Search Donor
+            </h4>
 
-            <div class="col-md-5">
-                <input type="text" class="form-control" placeholder="Enter City">
-            </div>
+        </div>
 
-            <div class="col-md-2">
-                <button class="btn btn-danger w-100">
-                    Search
-                </button>
-            </div>
+        <div class="card-body">
+
+            <form>
+
+                <div class="row">
+
+                    <div class="col-md-5 mb-3">
+
+                        <label class="form-label">
+                            Blood Group
+                        </label>
+
+                        <select class="form-select">
+
+                            <option selected disabled>
+                                Select Blood Group
+                            </option>
+
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                            <option>O+</option>
+                            <option>O-</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-5 mb-3">
+
+                        <label class="form-label">
+                            City
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Enter City">
+
+                    </div>
+
+                    <div class="col-md-2 d-grid">
+
+                        <label class="form-label text-white">
+                            Search
+                        </label>
+
+                        <button class="btn btn-danger">
+
+                            Search
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="card shadow mt-5">
+
+        <div class="card-header bg-success text-white">
+
+            <h4 class="mb-0">
+                Search Result
+            </h4>
+
+        </div>
+
+        <div class="card-body">
+
+            <table class="table table-bordered table-hover text-center">
+
+                <thead class="table-danger">
+
+                    <tr>
+
+                        <th>Name</th>
+
+                        <th>Blood Group</th>
+
+                        <th>City</th>
+
+                        <th>Mobile</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Rahul Sharma</td>
+
+                        <td>O+</td>
+
+                        <td>Jaipur</td>
+
+                        <td>9876543210</td>
+
+                        <td>
+                            <span class="badge bg-success">
+                                Available
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Priya Patel</td>
+
+                        <td>A+</td>
+
+                        <td>Vadodara</td>
+
+                        <td>9123456780</td>
+
+                        <td>
+                            <span class="badge bg-success">
+                                Available
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
 
         </div>
 
