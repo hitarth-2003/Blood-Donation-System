@@ -21,7 +21,6 @@ E:\web application project\BloodDonationSystem\obj\Debug\net10.0\rjsmcshtml.dswa
 E:\web application project\BloodDonationSystem\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 E:\web application project\BloodDonationSystem\obj\Debug\net10.0\scopedcss\bundle\BloodDonationSystem.styles.css
 E:\web application project\BloodDonationSystem\obj\Debug\net10.0\scopedcss\projectbundle\BloodDonationSystem.bundle.scp.css
-E:\web application project\BloodDonationSystem\obj\Debug\net10.0\compressed\85o2pfireu-{0}-b9sayid5wm-b9sayid5wm.gz
 E:\web application project\BloodDonationSystem\obj\Debug\net10.0\compressed\m86edzewj0-{0}-61n19gt1b8-61n19gt1b8.gz
 E:\web application project\BloodDonationSystem\obj\Debug\net10.0\compressed\i0bon6r91c-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 E:\web application project\BloodDonationSystem\obj\Debug\net10.0\compressed\6whg6foqf9-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -95,3 +94,5 @@ E:\web application project\BloodDonationSystem\obj\Debug\net10.0\refint\BloodDon
 E:\web application project\BloodDonationSystem\obj\Debug\net10.0\BloodDonationSystem.pdb
 E:\web application project\BloodDonationSystem\obj\Debug\net10.0\BloodDonationSystem.genruntimeconfig.cache
 E:\web application project\BloodDonationSystem\obj\Debug\net10.0\ref\BloodDonationSystem.dll
+E:\web application project\BloodDonationSystem\obj\Debug\net10.0\BloodDonationSystem.sourcelink.json
+E:\web application project\BloodDonationSystem\obj\Debug\net10.0\compressed\85o2pfireu-{0}-601scobdla-601scobdla.gz
