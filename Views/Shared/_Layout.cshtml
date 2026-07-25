@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Blood Donation System</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BloodDonationSystem.styles.css" asp-append-version="true" />
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger shadow">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold"
+   asp-controller="Home"
+   asp-action="Index">
+
+<i class="fa-solid fa-droplet"></i>
+
+Blood Donation System
+
+</a>
+
+<button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse"
+     id="navbarNav">
+
+<ul class="navbar-nav ms-auto">
+
+<!-- Home -->
+<li class="nav-item">
+    <a class="nav-link"
+       asp-controller="Home"
+       asp-action="Index">
+        Home
+    </a>
+</li>
+
+<!-- About -->
+<li class="nav-item">
+    <a class="nav-link"
+       asp-controller="About"
+       asp-action="Index">
+        About
+    </a>
+</li>
+
+<!-- Contact -->
+<li class="nav-item">
+    <a class="nav-link"
+       asp-controller="Contact"
+       asp-action="Index">
+        Contact
+    </a>
+</li>
+
+<!-- Donor Dropdown -->
+<li class="nav-item dropdown">
+
+    <a class="nav-link dropdown-toggle"
+       href="#"
+       role="button"
+       data-bs-toggle="dropdown">
+
+        Donor
+
+    </a>
+
+    <ul class="dropdown-menu">
+
+        <li>
+            <a class="dropdown-item"
+               asp-controller="Donor"
+               asp-action="Register">
+
+                Register Donor
+
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item"
+               asp-controller="Donor"
+               asp-action="List">
+
+                Donor List
+
+            </a>
+        </li>
+
+    </ul>
+
+</li>
+
+<!-- Blood Request -->
+<li class="nav-item">
+
+    <a class="nav-link"
+       asp-controller="Blood"
+       asp-action="RequestBlood">
+
+        Request Blood
+
+    </a>
+
+</li>
+
+<!-- Admin -->
+<li class="nav-item">
+
+    <a class="btn btn-light text-danger fw-bold ms-2"
+       asp-controller="Admin"
+       asp-action="Login">
+
+        Admin
+
+    </a>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+</header>
+
+<main>
+
+    @RenderBody()
+
+</main>
+
+<footer class="bg-dark text-white mt-5">
+
+<div class="container text-center py-4">
+
+<h5>Blood Donation System</h5>
+
+<p>Donate Blood • Save Lives ❤️</p>
+
+<p class="mb-0">
+© 2026 Blood Donation System | MCA Tiny Project
+</p>
+
+</div>
+
+</footer>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

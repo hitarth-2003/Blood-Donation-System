@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Search Donor";
+}
+
+<div class="container py-5">
+
+    <div class="text-center mb-4">
+        <h1 class="text-danger fw-bold">Find Blood Donor</h1>
+    </div>
+
+    <div class="card shadow p-4">
+
+        <div class="row">
+
+            <div class="col-md-5">
+                <select class="form-select">
+                    <option>Select Blood Group</option>
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                </select>
+            </div>
+
+            <div class="col-md-5">
+                <input type="text" class="form-control" placeholder="Enter City">
+            </div>
+
+            <div class="col-md-2">
+                <button class="btn btn-danger w-100">
+                    Search
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

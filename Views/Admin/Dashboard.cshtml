@@ -1,0 +1,67 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container py-5">
+
+    <h1 class="text-danger text-center mb-5">
+        Admin Dashboard
+    </h1>
+
+    <div class="row">
+
+        <div class="col-md-3 mb-4">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h2 class="text-danger">250</h2>
+                    <p>Total Donors</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h2 class="text-danger">75</h2>
+                    <p>Blood Requests</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h2 class="text-danger">18</h2>
+                    <p>Hospitals</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h2 class="text-danger">8</h2>
+                    <p>Blood Groups</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mt-5">
+
+        <a asp-controller="Admin"
+           asp-action="ManageDonors"
+           class="btn btn-danger me-2">
+            Manage Donors
+        </a>
+
+        <a asp-controller="Admin"
+           asp-action="ManageRequests"
+           class="btn btn-dark">
+            Manage Requests
+        </a>
+
+    </div>
+
+</div>

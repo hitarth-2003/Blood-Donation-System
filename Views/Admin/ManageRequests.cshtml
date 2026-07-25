@@ -1,0 +1,56 @@
+@{
+    ViewData["Title"] = "Manage Requests";
+}
+
+<div class="container py-5">
+
+    <h2 class="text-danger mb-4">
+        Manage Blood Requests
+    </h2>
+
+    <table class="table table-bordered table-hover shadow">
+
+        <thead class="table-danger">
+
+            <tr>
+                <th>ID</th>
+                <th>Patient</th>
+                <th>Blood Group</th>
+                <th>Units</th>
+                <th>Hospital</th>
+                <th>Action</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>1</td>
+                <td>Raj Patel</td>
+                <td>O+</td>
+                <td>2</td>
+                <td>City Hospital</td>
+                <td>
+                    <button class="btn btn-success btn-sm">Approve</button>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Anjali Shah</td>
+                <td>A-</td>
+                <td>1</td>
+                <td>Apollo Hospital</td>
+                <td>
+                    <button class="btn btn-success btn-sm">Approve</button>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>

@@ -1,0 +1,81 @@
+@{
+    ViewData["Title"] = "Donor List";
+}
+
+<div class="container py-5">
+
+    <h1 class="text-danger text-center mb-4">Registered Blood Donors</h1>
+
+    <div class="row mb-4">
+
+        <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Search by Name">
+        </div>
+
+        <div class="col-md-4">
+            <select class="form-select">
+                <option>All Blood Groups</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+            </select>
+        </div>
+
+        <div class="col-md-4">
+            <button class="btn btn-danger w-100">
+                Search
+            </button>
+        </div>
+
+    </div>
+
+    <table class="table table-bordered table-hover shadow">
+
+        <thead class="table-danger">
+
+            <tr>
+                <th>Name</th>
+                <th>Blood Group</th>
+                <th>City</th>
+                <th>Mobile</th>
+                <th>Status</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Rahul Sharma</td>
+                <td>O+</td>
+                <td>Vadodara</td>
+                <td>9876543210</td>
+                <td class="text-success">Available</td>
+            </tr>
+
+            <tr>
+                <td>Priya Patel</td>
+                <td>A+</td>
+                <td>Ahmedabad</td>
+                <td>9123456780</td>
+                <td class="text-success">Available</td>
+            </tr>
+
+            <tr>
+                <td>Amit Singh</td>
+                <td>B-</td>
+                <td>Surat</td>
+                <td>9876501234</td>
+                <td class="text-danger">Unavailable</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
