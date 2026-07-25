@@ -5,69 +5,273 @@
 <div class="container py-5">
 
     <div class="text-center mb-5">
-        <h1 class="text-danger fw-bold">Blood Request Form</h1>
-        <p class="lead">Fill in the details to request blood.</p>
-    </div>
 
-    <div class="card shadow p-4">
+        <h1 class="text-danger fw-bold">
+            Request Blood
+        </h1>
 
-        <form>
-
-            <div class="row">
-
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Patient Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Patient Name">
-                </div>
-
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Blood Group</label>
-                    <select class="form-select">
-                        <option>Select Blood Group</option>
-                        <option>A+</option>
-                        <option>A-</option>
-                        <option>B+</option>
-                        <option>B-</option>
-                        <option>AB+</option>
-                        <option>AB-</option>
-                        <option>O+</option>
-                        <option>O-</option>
-                    </select>
-                </div>
-
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Units Required</label>
-                    <input type="number" class="form-control">
-                </div>
-
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Hospital Name</label>
-                    <input type="text" class="form-control">
-                </div>
-
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">City</label>
-                    <input type="text" class="form-control">
-                </div>
-
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Contact Number</label>
-                    <input type="text" class="form-control">
-                </div>
-
-                <div class="col-12 mb-3">
-                    <label class="form-label">Additional Information</label>
-                    <textarea class="form-control" rows="4"></textarea>
-                </div>
-
-            </div>
-
-            <button class="btn btn-danger btn-lg w-100">
-                Submit Blood Request
-            </button>
-
-        </form>
+        <p class="lead">
+            Submit your blood requirement and get help quickly.
+        </p>
 
     </div>
+
+
+    <div class="card shadow-lg">
+
+
+        <div class="card-header bg-danger text-white">
+
+            <h3 class="mb-0">
+                Blood Request Form
+            </h3>
+
+        </div>
+
+
+        <div class="card-body p-4">
+
+
+            <form>
+
+
+                <div class="row">
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Patient Name
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Enter Patient Name">
+
+                    </div>
+
+
+
+                    <div class="col-md-3 mb-3">
+
+                        <label class="form-label">
+                            Age
+                        </label>
+
+                        <input type="number"
+                               class="form-control"
+                               placeholder="Age">
+
+                    </div>
+
+
+
+                    <div class="col-md-3 mb-3">
+
+                        <label class="form-label">
+                            Gender
+                        </label>
+
+                        <select class="form-select">
+
+                            <option selected disabled>
+                                Select Gender
+                            </option>
+
+                            <option>
+                                Male
+                            </option>
+
+                            <option>
+                                Female
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Required Blood Group
+                        </label>
+
+
+                        <select class="form-select">
+
+                            <option selected disabled>
+                                Select Blood Group
+                            </option>
+
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                            <option>O+</option>
+                            <option>O-</option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Units Required
+                        </label>
+
+                        <input type="number"
+                               class="form-control"
+                               placeholder="Number of Units">
+
+                    </div>
+
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Hospital Name
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Enter Hospital Name">
+
+                    </div>
+
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            City
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Enter City">
+
+                    </div>
+
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Contact Number
+                        </label>
+
+                        <input type="tel"
+                               class="form-control"
+                               placeholder="Enter Contact Number">
+
+                    </div>
+
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Required Date
+                        </label>
+
+                        <input type="date"
+                               class="form-control">
+
+                    </div>
+
+
+
+                    <div class="col-md-12 mb-3">
+
+                        <label class="form-label">
+                            Emergency Priority
+                        </label>
+
+
+                        <select class="form-select">
+
+                            <option>
+                                Normal
+                            </option>
+
+                            <option>
+                                Urgent
+                            </option>
+
+                            <option>
+                                Critical
+                            </option>
+
+                        </select>
+
+
+                    </div>
+
+
+
+                    <div class="col-12 mb-3">
+
+                        <label class="form-label">
+                            Hospital Address
+                        </label>
+
+
+                        <textarea class="form-control"
+                                  rows="3"
+                                  placeholder="Enter Complete Address"></textarea>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="d-grid">
+
+                    <button class="btn btn-danger btn-lg">
+
+                        Submit Blood Request
+
+                    </button>
+
+                </div>
+
+
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="alert alert-success mt-4 text-center">
+
+        <strong>
+            Success!
+        </strong>
+
+        Blood Request Submitted Successfully.
+        We will contact you as soon as possible.
+
+    </div>
+
 
 </div>
