@@ -4,47 +4,120 @@
 
 <div class="container py-5">
 
-    <h1 class="text-danger text-center mb-4">
-        Blood Request List
-    </h1>
+    <div class="text-center mb-4">
 
-    <table class="table table-bordered table-hover shadow">
+        <h1 class="text-danger fw-bold">
+            Blood Requests
+        </h1>
 
-        <thead class="table-danger">
+        <p class="lead">
+            Current blood requests submitted by patients.
+        </p>
 
-            <tr>
-                <th>Patient</th>
-                <th>Blood Group</th>
-                <th>Units</th>
-                <th>Hospital</th>
-                <th>City</th>
-                <th>Contact</th>
-            </tr>
+    </div>
 
-        </thead>
+    <div class="card shadow">
 
-        <tbody>
+        <div class="card-header bg-danger text-white">
 
-            <tr>
-                <td>Raj Patel</td>
-                <td>O+</td>
-                <td>2</td>
-                <td>City Hospital</td>
-                <td>Vadodara</td>
-                <td>9876543210</td>
-            </tr>
+            <h4 class="mb-0">
+                Request List
+            </h4>
 
-            <tr>
-                <td>Anjali Shah</td>
-                <td>A-</td>
-                <td>1</td>
-                <td>Apollo Hospital</td>
-                <td>Ahmedabad</td>
-                <td>9876501234</td>
-            </tr>
+        </div>
 
-        </tbody>
+        <div class="card-body">
 
-    </table>
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-hover text-center align-middle">
+
+                    <thead class="table-danger">
+
+                        <tr>
+
+                            <th>Patient</th>
+
+                            <th>Blood Group</th>
+
+                            <th>Hospital</th>
+
+                            <th>City</th>
+
+                            <th>Units</th>
+
+                            <th>Priority</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Rahul Sharma</td>
+
+                            <td><span class="badge bg-danger">O+</span></td>
+
+                            <td>City Hospital</td>
+
+                            <td>Jaipur</td>
+
+                            <td>2</td>
+
+                            <td><span class="badge bg-warning text-dark">Urgent</span></td>
+
+                            <td><span class="badge bg-success">Pending</span></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Priya Patel</td>
+
+                            <td><span class="badge bg-danger">A+</span></td>
+
+                            <td>Apollo Hospital</td>
+
+                            <td>Vadodara</td>
+
+                            <td>1</td>
+
+                            <td><span class="badge bg-danger">Critical</span></td>
+
+                            <td><span class="badge bg-success">Pending</span></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Amit Singh</td>
+
+                            <td><span class="badge bg-danger">B+</span></td>
+
+                            <td>SMS Hospital</td>
+
+                            <td>Kota</td>
+
+                            <td>3</td>
+
+                            <td><span class="badge bg-primary">Normal</span></td>
+
+                            <td><span class="badge bg-success">Approved</span></td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
