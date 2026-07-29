@@ -1,3 +1,5 @@
+@model BloodDonationSystem.Models.AdminDashboardViewModel
+
 @{
     ViewData["Title"] = "Dashboard";
 }
@@ -13,7 +15,7 @@
         <div class="col-md-3 mb-4">
             <div class="card text-center shadow">
                 <div class="card-body">
-                    <h2 class="text-danger">250</h2>
+                    <h2 class="text-danger">@Model.TotalDonors</h2>
                     <p>Total Donors</p>
                 </div>
             </div>
@@ -22,7 +24,7 @@
         <div class="col-md-3 mb-4">
             <div class="card text-center shadow">
                 <div class="card-body">
-                    <h2 class="text-danger">75</h2>
+                    <h2 class="text-danger">@Model.TotalRequests</h2>
                     <p>Blood Requests</p>
                 </div>
             </div>
@@ -31,8 +33,8 @@
         <div class="col-md-3 mb-4">
             <div class="card text-center shadow">
                 <div class="card-body">
-                    <h2 class="text-danger">18</h2>
-                    <p>Hospitals</p>
+                    <h2 class="text-danger">@Model.TotalContacts</h2>
+                    <p>Contact Messages</p>
                 </div>
             </div>
         </div>
@@ -51,16 +53,30 @@
     <div class="mt-5">
 
         <a asp-controller="Admin"
-           asp-action="ManageDonors"
+           asp-action="Donors"
            class="btn btn-danger me-2">
             Manage Donors
         </a>
 
         <a asp-controller="Admin"
-           asp-action="ManageRequests"
-           class="btn btn-dark">
+           asp-action="Requests"
+           class="btn btn-dark me-2">
             Manage Requests
         </a>
+
+        <a asp-controller="Admin"
+           asp-action="Contacts"
+           class="btn btn-success">
+            Contact Messages
+        </a>
+
+        <a asp-controller="Admin"
+   asp-action="Logout"
+   class="btn btn-dark">
+
+    Logout
+
+</a>
 
     </div>
 

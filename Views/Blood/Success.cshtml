@@ -1,0 +1,91 @@
+@{
+    ViewData["Title"] = "Request Submitted Successfully";
+}
+
+
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-7">
+
+
+            <div class="card shadow-lg border-0 text-center">
+
+
+                <div class="card-body p-5">
+
+
+                    <i class="fa-solid fa-circle-check text-success"
+                       style="font-size:90px;">
+                    </i>
+
+
+
+                    <h2 class="text-success fw-bold mt-4">
+
+                        Blood Request Submitted Successfully!
+
+                    </h2>
+
+
+
+                    <p class="lead mt-3">
+
+                        Your blood request has been submitted successfully.
+                        We will help you connect with available blood donors.
+
+                    </p>
+
+
+
+                    <hr>
+
+
+
+                    <p class="text-muted">
+
+                        Thank you for using Blood Donation System ❤️
+
+                    </p>
+
+
+
+                    <div class="mt-4">
+
+
+                        <a asp-controller="Home"
+                           asp-action="Index"
+                           class="btn btn-danger me-2">
+
+                            Go To Home
+
+                        </a>
+
+
+
+                        <a asp-controller="Blood"
+                           asp-action="Requests"
+                           class="btn btn-outline-danger">
+
+                            View Requests
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>

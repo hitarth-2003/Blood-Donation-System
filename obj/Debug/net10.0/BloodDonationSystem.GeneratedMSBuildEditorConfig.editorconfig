@@ -39,6 +39,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/web application project/BloodDonationSystem/Views/Admin/EditDonor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdERvbm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/web application project/BloodDonationSystem/Views/Admin/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -49,6 +53,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/web application project/BloodDonationSystem/Views/Admin/ManageRequests.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlUmVxdWVzdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/web application project/BloodDonationSystem/Views/Blood/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvb2RcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/web application project/BloodDonationSystem/Views/Blood/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvb2RcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/web application project/BloodDonationSystem/Views/Blood/RequestBlood.cshtml]
@@ -63,8 +75,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvb2RcU2VhcmNoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/web application project/BloodDonationSystem/Views/Blood/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvb2RcU3VjY2Vzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/web application project/BloodDonationSystem/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/web application project/BloodDonationSystem/Views/Contact/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxTdWNjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/web application project/BloodDonationSystem/Views/Donor/Details.cshtml]
@@ -77,6 +97,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/web application project/BloodDonationSystem/Views/Donor/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ub3JcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/web application project/BloodDonationSystem/Views/Donor/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ub3JcU3VjY2Vzcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/web application project/BloodDonationSystem/Views/Home/Index.cshtml]

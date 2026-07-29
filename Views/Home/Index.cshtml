@@ -1,4 +1,120 @@
-﻿<hr>
+﻿@model BloodDonationSystem.Models.HomeViewModel
+
+@{
+    ViewData["Title"] = "Home";
+}
+<!-- Hero Section -->
+
+<div class="container py-5">
+
+    <div class="row align-items-center">
+
+        <div class="col-md-6">
+
+            <h1 class="display-4 fw-bold text-danger">
+                Donate Blood, Save Lives ❤️
+            </h1>
+
+            <p class="lead mt-4">
+                Join our blood donation community and help patients find blood quickly during emergencies.
+            </p>
+
+            <div class="mt-4">
+
+                <a asp-controller="Donor"
+                   asp-action="Register"
+                   class="btn btn-danger btn-lg me-2">
+                    Become a Donor
+                </a>
+
+                <a asp-controller="Blood"
+                   asp-action="RequestBlood"
+                   class="btn btn-outline-danger btn-lg">
+                    Request Blood
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="row">
+
+                <div class="col-6 mb-3">
+
+                    <div class="card shadow text-center p-4">
+
+                        <h1 class="text-danger">
+                            @Model.TotalDonors
+                        </h1>
+
+                        <h5>
+                            Registered Donors
+                        </h5>
+
+                    </div>
+
+                </div>
+
+                <div class="col-6 mb-3">
+
+                    <div class="card shadow text-center p-4">
+
+                        <h1 class="text-danger">
+                            @Model.TotalRequests
+                        </h1>
+
+                        <h5>
+                            Blood Requests
+                        </h5>
+
+                    </div>
+
+                </div>
+
+                <div class="col-6">
+
+                    <div class="card shadow text-center p-4">
+
+                        <h1 class="text-danger">
+                            24×7
+                        </h1>
+
+                        <h5>
+                            Emergency Support
+                        </h5>
+
+                    </div>
+
+                </div>
+
+                <div class="col-6">
+
+                    <div class="card shadow text-center p-4">
+
+                        <h1 class="text-danger">
+                            100%
+                        </h1>
+
+                        <h5>
+                            Free Service
+                        </h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<hr>
+<hr>
 
 <div class="container py-5">
 

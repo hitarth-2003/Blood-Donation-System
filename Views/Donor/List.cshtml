@@ -1,3 +1,5 @@
+@model IEnumerable<BloodDonationSystem.Models.Donor>
+
 @{
     ViewData["Title"] = "Donor List";
 }
@@ -16,7 +18,6 @@
 
     </div>
 
-
     <div class="card shadow">
 
         <div class="card-header bg-danger text-white">
@@ -27,9 +28,7 @@
 
         </div>
 
-
         <div class="card-body">
-
 
             <div class="table-responsive">
 
@@ -39,35 +38,19 @@
 
                         <tr>
 
-                            <th>
-                                Photo
-                            </th>
+                            <th>Name</th>
 
-                            <th>
-                                Name
-                            </th>
+                            <th>Blood Group</th>
 
-                            <th>
-                                Blood Group
-                            </th>
+                            <th>Gender</th>
 
-                            <th>
-                                Gender
-                            </th>
+                            <th>City</th>
 
-                            <th>
-                                City
-                            </th>
+                            <th>Mobile</th>
 
-                            <th>
-                                Mobile
-                            </th>
+                            <th>Status</th>
 
-                            <th>
-                                Status
-                            </th>
-
-                            <th>
+                            <th width="250">
                                 Action
                             </th>
 
@@ -75,178 +58,91 @@
 
                     </thead>
 
-
                     <tbody>
 
+                        @foreach (var donor in Model)
+                        {
+                            <tr>
 
-                        <tr>
+                                <td>
+                                    @donor.FullName
+                                </td>
 
-                            <td>
-                                👨
-                            </td>
+                                <td>
 
-                            <td>
-                                Rahul Sharma
-                            </td>
+                                    <span class="badge bg-danger">
 
-                            <td>
-                                <span class="badge bg-danger">
-                                    O+
-                                </span>
-                            </td>
+                                        @donor.BloodGroup
 
-                            <td>
-                                Male
-                            </td>
+                                    </span>
 
-                            <td>
-                                Jaipur
-                            </td>
+                                </td>
 
-                            <td>
-                                9876543210
-                            </td>
+                                <td>
+                                    @donor.Gender
+                                </td>
 
-                            <td>
-                                <span class="badge bg-success">
-                                    Available
-                                </span>
-                            </td>
+                                <td>
+                                    @donor.City
+                                </td>
 
-                            <td>
+                                <td>
+                                    @donor.Mobile
+                                </td>
 
-                                <a asp-controller="Donor"
-                                   asp-action="Details"
-                                   class="btn btn-outline-danger btn-sm">
+                                <td>
 
-                                    View
+                                    <span class="badge bg-success">
 
-                                </a>
+                                        Available
 
-                            </td>
+                                    </span>
 
-                        </tr>
+                                </td>
 
+                                <td>
 
+                                    <a asp-controller="Donor"
+                                       asp-action="Details"
+                                       asp-route-id="@donor.Id"
+                                       class="btn btn-info btn-sm">
 
-                        <tr>
+                                        View
 
-                            <td>
-                                👩
-                            </td>
+                                    </a>
 
-                            <td>
-                                Priya Patel
-                            </td>
+                                    <a asp-controller="Donor"
+                                       asp-action="Edit"
+                                       asp-route-id="@donor.Id"
+                                       class="btn btn-warning btn-sm">
 
-                            <td>
-                                <span class="badge bg-danger">
-                                    A+
-                                </span>
-                            </td>
+                                        Edit
 
-                            <td>
-                                Female
-                            </td>
+                                    </a>
 
-                            <td>
-                                Vadodara
-                            </td>
+                                    <a asp-controller="Donor"
+                                       asp-action="Delete"
+                                       asp-route-id="@donor.Id"
+                                       class="btn btn-danger btn-sm"
+                                       onclick="return confirm('Are you sure you want to delete this donor?');">
 
-                            <td>
-                                9123456780
-                            </td>
+                                        Delete
 
-                            <td>
+                                    </a>
 
-                                <span class="badge bg-success">
-                                    Available
-                                </span>
+                                </td>
 
-                            </td>
-
-                            <td>
-
-                                <a asp-controller="Donor"
-                                   asp-action="Details"
-                                   class="btn btn-outline-danger btn-sm">
-
-                                    View
-
-                                </a>
-
-                            </td>
-
-                        </tr>
-
-
-
-                        <tr>
-
-                            <td>
-                                👨
-                            </td>
-
-                            <td>
-                                Amit Singh
-                            </td>
-
-                            <td>
-
-                                <span class="badge bg-danger">
-                                    B+
-                                </span>
-
-                            </td>
-
-                            <td>
-                                Male
-                            </td>
-
-                            <td>
-                                Delhi
-                            </td>
-
-                            <td>
-                                9988776655
-                            </td>
-
-                            <td>
-
-                                <span class="badge bg-warning">
-                                    Not Available
-                                </span>
-
-                            </td>
-
-                            <td>
-
-                                <a asp-controller="Donor"
-                                   asp-action="Details"
-                                   class="btn btn-outline-danger btn-sm">
-
-                                    View
-
-                                </a>
-
-                            </td>
-
-                        </tr>
-
-
+                            </tr>
+                        }
 
                     </tbody>
 
-
                 </table>
 
-
             </div>
-
 
         </div>
 
     </div>
-
 
 </div>

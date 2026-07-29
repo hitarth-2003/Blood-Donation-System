@@ -1,0 +1,83 @@
+@model BloodDonationSystem.Models.BloodRequest
+
+@{
+    ViewData["Title"] = "Edit Request";
+}
+
+
+<div class="container py-5">
+
+<h2 class="text-danger text-center">
+    Edit Blood Request
+</h2>
+
+
+<form asp-action="Edit" method="post">
+
+
+<input type="hidden" asp-for="Id" />
+
+
+<div class="mb-3">
+
+<label>
+Patient Name
+</label>
+
+<input asp-for="PatientName"
+class="form-control"/>
+
+</div>
+
+
+
+<div class="mb-3">
+
+<label>
+Blood Group
+</label>
+
+<input asp-for="BloodGroup"
+class="form-control"/>
+
+</div>
+
+
+
+<div class="mb-3">
+
+<label>
+Hospital
+</label>
+
+<input asp-for="HospitalName"
+class="form-control"/>
+
+</div>
+
+
+
+<div class="mb-3">
+
+<label>
+City
+</label>
+
+<input asp-for="City"
+class="form-control"/>
+
+</div>
+
+
+
+<button class="btn btn-danger">
+
+Update
+
+</button>
+
+
+</form>
+
+
+</div>

@@ -1,0 +1,59 @@
+@{
+    ViewData["Title"] = "Registration Successful";
+}
+
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-7">
+
+            <div class="card shadow-lg border-0">
+
+                <div class="card-body text-center p-5">
+
+                    <i class="fa-solid fa-circle-check text-success"
+                       style="font-size:90px;"></i>
+
+                    <h2 class="mt-4 text-success fw-bold">
+                        Donor Registered Successfully!
+                    </h2>
+
+                    <p class="lead mt-3">
+                        Thank you for registering as a blood donor.
+                        Your information has been saved successfully.
+                    </p>
+
+                    <hr>
+
+                    <a asp-action="Register"
+                       class="btn btn-danger me-2">
+
+                        Register Another Donor
+
+                    </a>
+
+                    <a asp-action="List"
+                       class="btn btn-outline-danger me-2">
+
+                        View Donor List
+
+                    </a>
+
+                    <a asp-controller="Home"
+                       asp-action="Index"
+                       class="btn btn-dark">
+
+                        Go Home
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

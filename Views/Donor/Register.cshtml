@@ -1,3 +1,5 @@
+@model BloodDonationSystem.Models.Donor
+
 @{
     ViewData["Title"] = "Become a Donor";
 }
@@ -16,6 +18,7 @@
 
     </div>
 
+
     <div class="card shadow-lg">
 
         <div class="card-header bg-danger text-white">
@@ -26,11 +29,15 @@
 
         </div>
 
+
         <div class="card-body p-4">
 
-            <form>
+
+            <form asp-action="Register" method="post">
+
 
                 <div class="row">
+
 
                     <div class="col-md-6 mb-3">
 
@@ -38,11 +45,13 @@
                             Full Name
                         </label>
 
-                        <input type="text"
+                        <input asp-for="FullName"
                                class="form-control"
                                placeholder="Enter Full Name">
 
                     </div>
+
+
 
                     <div class="col-md-3 mb-3">
 
@@ -50,11 +59,13 @@
                             Age
                         </label>
 
-                        <input type="number"
+                        <input asp-for="Age"
                                class="form-control"
                                placeholder="Age">
 
                     </div>
+
+
 
                     <div class="col-md-3 mb-3">
 
@@ -62,11 +73,12 @@
                             Weight (kg)
                         </label>
 
-                        <input type="number"
-                               class="form-control"
+                        <input class="form-control"
                                placeholder="Weight">
 
                     </div>
+
+
 
                     <div class="col-md-6 mb-3">
 
@@ -74,21 +86,21 @@
                             Gender
                         </label>
 
-                        <select class="form-select">
+                        <select asp-for="Gender" class="form-select">
 
                             <option selected disabled>
                                 Select Gender
                             </option>
 
                             <option>Male</option>
-
                             <option>Female</option>
-
                             <option>Other</option>
 
                         </select>
 
                     </div>
+
+
 
                     <div class="col-md-6 mb-3">
 
@@ -96,7 +108,7 @@
                             Blood Group
                         </label>
 
-                        <select class="form-select">
+                        <select asp-for="BloodGroup" class="form-select">
 
                             <option selected disabled>
                                 Select Blood Group
@@ -115,17 +127,21 @@
 
                     </div>
 
+
+
                     <div class="col-md-6 mb-3">
 
                         <label class="form-label">
                             Mobile Number
                         </label>
 
-                        <input type="tel"
+                        <input asp-for="Mobile"
                                class="form-control"
                                placeholder="Enter Mobile Number">
 
                     </div>
+
+
 
                     <div class="col-md-6 mb-3">
 
@@ -133,11 +149,13 @@
                             Email Address
                         </label>
 
-                        <input type="email"
+                        <input asp-for="Email"
                                class="form-control"
                                placeholder="Enter Email">
 
                     </div>
+
+
 
                     <div class="col-md-6 mb-3">
 
@@ -145,11 +163,13 @@
                             City
                         </label>
 
-                        <input type="text"
+                        <input asp-for="City"
                                class="form-control"
                                placeholder="Enter City">
 
                     </div>
+
+
 
                     <div class="col-md-6 mb-3">
 
@@ -157,10 +177,13 @@
                             Last Donation Date
                         </label>
 
-                        <input type="date"
+                        <input asp-for="LastDonationDate"
+                               type="date"
                                class="form-control">
 
                     </div>
+
+
 
                     <div class="col-12 mb-3">
 
@@ -168,48 +191,17 @@
                             Address
                         </label>
 
-                        <textarea class="form-control"
+                        <textarea asp-for="Address"
+                                  class="form-control"
                                   rows="3"
                                   placeholder="Enter Complete Address"></textarea>
 
                     </div>
 
-                    <div class="col-md-6 mb-3">
-
-                        <label class="form-label">
-                            Password
-                        </label>
-
-                        <input type="password"
-                               class="form-control"
-                               placeholder="Create Password">
-
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-
-                        <label class="form-label">
-                            Confirm Password
-                        </label>
-
-                        <input type="password"
-                               class="form-control"
-                               placeholder="Confirm Password">
-
-                    </div>
-
-                    <div class="col-12 mb-4">
-
-                        <label class="form-label">
-                            Upload Profile Photo
-                        </label>
-
-                        <input type="file"
-                               class="form-control">
-
-                    </div>
 
                 </div>
+
+
 
                 <div class="d-grid">
 
@@ -221,20 +213,27 @@
 
                 </div>
 
+
             </form>
+
 
         </div>
 
     </div>
 
-    <div class="alert alert-success mt-4">
+
+
+    @if(TempData["Message"] != null)
+{
+    <div class="alert alert-success mt-4 text-center">
 
         <strong>
             Success!
         </strong>
 
-        Donor Registered Successfully.
+        @TempData["Message"]
 
     </div>
+}
 
 </div>

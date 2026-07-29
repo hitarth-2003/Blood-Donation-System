@@ -1,3 +1,5 @@
+@model BloodDonationSystem.Models.BloodRequest
+
 @{
     ViewData["Title"] = "Request Blood";
 }
@@ -16,9 +18,7 @@
 
     </div>
 
-
     <div class="card shadow-lg">
-
 
         <div class="card-header bg-danger text-white">
 
@@ -28,15 +28,11 @@
 
         </div>
 
-
         <div class="card-body p-4">
 
-
-            <form>
-
+            <form asp-action="RequestBlood" method="post">
 
                 <div class="row">
-
 
                     <div class="col-md-6 mb-3">
 
@@ -44,13 +40,11 @@
                             Patient Name
                         </label>
 
-                        <input type="text"
+                        <input asp-for="PatientName"
                                class="form-control"
                                placeholder="Enter Patient Name">
 
                     </div>
-
-
 
                     <div class="col-md-3 mb-3">
 
@@ -58,13 +52,11 @@
                             Age
                         </label>
 
-                        <input type="number"
+                        <input asp-for="Age"
                                class="form-control"
                                placeholder="Age">
 
                     </div>
-
-
 
                     <div class="col-md-3 mb-3">
 
@@ -72,29 +64,17 @@
                             Gender
                         </label>
 
-                        <select class="form-select">
+                        <select asp-for="Gender" class="form-select">
 
-                            <option selected disabled>
-                                Select Gender
-                            </option>
+                            <option selected disabled>Select Gender</option>
 
-                            <option>
-                                Male
-                            </option>
-
-                            <option>
-                                Female
-                            </option>
-
-                            <option>
-                                Other
-                            </option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
 
                         </select>
 
                     </div>
-
-
 
                     <div class="col-md-6 mb-3">
 
@@ -102,12 +82,9 @@
                             Required Blood Group
                         </label>
 
+                        <select asp-for="BloodGroup" class="form-select">
 
-                        <select class="form-select">
-
-                            <option selected disabled>
-                                Select Blood Group
-                            </option>
+                            <option selected disabled>Select Blood Group</option>
 
                             <option>A+</option>
                             <option>A-</option>
@@ -122,21 +99,17 @@
 
                     </div>
 
-
-
                     <div class="col-md-6 mb-3">
 
                         <label class="form-label">
                             Units Required
                         </label>
 
-                        <input type="number"
+                        <input asp-for="UnitsRequired"
                                class="form-control"
                                placeholder="Number of Units">
 
                     </div>
-
-
 
                     <div class="col-md-6 mb-3">
 
@@ -144,13 +117,11 @@
                             Hospital Name
                         </label>
 
-                        <input type="text"
+                        <input asp-for="HospitalName"
                                class="form-control"
                                placeholder="Enter Hospital Name">
 
                     </div>
-
-
 
                     <div class="col-md-6 mb-3">
 
@@ -158,13 +129,11 @@
                             City
                         </label>
 
-                        <input type="text"
+                        <input asp-for="City"
                                class="form-control"
                                placeholder="Enter City">
 
                     </div>
-
-
 
                     <div class="col-md-6 mb-3">
 
@@ -172,13 +141,11 @@
                             Contact Number
                         </label>
 
-                        <input type="tel"
+                        <input asp-for="ContactNumber"
                                class="form-control"
                                placeholder="Enter Contact Number">
 
                     </div>
-
-
 
                     <div class="col-md-6 mb-3">
 
@@ -186,12 +153,11 @@
                             Required Date
                         </label>
 
-                        <input type="date"
+                        <input asp-for="RequiredDate"
+                               type="date"
                                class="form-control">
 
                     </div>
-
-
 
                     <div class="col-md-12 mb-3">
 
@@ -199,27 +165,15 @@
                             Emergency Priority
                         </label>
 
+                        <select asp-for="Priority" class="form-select">
 
-                        <select class="form-select">
-
-                            <option>
-                                Normal
-                            </option>
-
-                            <option>
-                                Urgent
-                            </option>
-
-                            <option>
-                                Critical
-                            </option>
+                            <option>Normal</option>
+                            <option>Urgent</option>
+                            <option>Critical</option>
 
                         </select>
 
-
                     </div>
-
-
 
                     <div class="col-12 mb-3">
 
@@ -227,18 +181,14 @@
                             Hospital Address
                         </label>
 
-
-                        <textarea class="form-control"
+                        <textarea asp-for="Address"
+                                  class="form-control"
                                   rows="3"
                                   placeholder="Enter Complete Address"></textarea>
 
-
                     </div>
 
-
                 </div>
-
-
 
                 <div class="d-grid">
 
@@ -250,28 +200,18 @@
 
                 </div>
 
-
-
             </form>
-
 
         </div>
 
-
     </div>
 
-
-
+    @if (TempData["Message"] != null)
+{
     <div class="alert alert-success mt-4 text-center">
-
-        <strong>
-            Success!
-        </strong>
-
-        Blood Request Submitted Successfully.
-        We will contact you as soon as possible.
-
+        <strong>Success!</strong>
+        @TempData["Message"]
     </div>
-
+}
 
 </div>

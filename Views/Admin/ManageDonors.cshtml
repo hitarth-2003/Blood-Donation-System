@@ -1,3 +1,5 @@
+@model IEnumerable<BloodDonationSystem.Models.Donor>
+
 @{
     ViewData["Title"] = "Manage Donors";
 }
@@ -18,36 +20,52 @@
                 <th>Blood Group</th>
                 <th>City</th>
                 <th>Mobile</th>
-                <th>Action</th>
+                <th width="180">Action</th>
             </tr>
 
         </thead>
 
         <tbody>
 
+        @foreach (var donor in Model)
+        {
             <tr>
-                <td>1</td>
-                <td>Rahul Sharma</td>
-                <td>O+</td>
-                <td>Vadodara</td>
-                <td>9876543210</td>
-                <td>
-                    <button class="btn btn-warning btn-sm">Edit</button>
-                    <button class="btn btn-danger btn-sm">Delete</button>
-                </td>
-            </tr>
 
-            <tr>
-                <td>2</td>
-                <td>Priya Patel</td>
-                <td>A+</td>
-                <td>Ahmedabad</td>
-                <td>9123456780</td>
+                <td>@donor.Id</td>
+
+                <td>@donor.FullName</td>
+
+                <td>@donor.BloodGroup</td>
+
+                <td>@donor.City</td>
+
+                <td>@donor.Mobile</td>
+
                 <td>
-                    <button class="btn btn-warning btn-sm">Edit</button>
-                    <button class="btn btn-danger btn-sm">Delete</button>
+
+                    <a asp-controller="Admin"
+                       asp-action="EditDonor"
+                       asp-route-id="@donor.Id"
+                       class="btn btn-warning btn-sm">
+
+                        Edit
+
+                    </a>
+
+                    <a asp-controller="Admin"
+                       asp-action="DeleteDonor"
+                       asp-route-id="@donor.Id"
+                       class="btn btn-danger btn-sm"
+                       onclick="return confirm('Are you sure you want to delete this donor?');">
+
+                        Delete
+
+                    </a>
+
                 </td>
+
             </tr>
+        }
 
         </tbody>
 
