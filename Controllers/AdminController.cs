@@ -173,6 +173,25 @@ namespace BloodDonationSystem.Controllers
             return RedirectToAction("ManageRequests");
         }
 
+
+        // ==========================
+// Approve Request
+// ==========================
+public IActionResult ApproveRequest(int id)
+{
+    var request = _context.BloodRequests
+                          .FirstOrDefault(x => x.Id == id);
+
+    if (request != null)
+    {
+        request.Status = "Approved";
+
+        _context.SaveChanges();
+    }
+
+    return RedirectToAction("ManageRequests");
+}
+
         // ==========================
         // Contact Messages
         // ==========================

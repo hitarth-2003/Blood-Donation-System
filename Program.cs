@@ -3,20 +3,21 @@ using BloodDonationSystem.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 // Database Connection
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 
-
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// ===============================
+// Enable Session
+// ===============================
+builder.Services.AddSession();
 
 var app = builder.Build();
-
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -25,20 +26,22 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-
 app.UseHttpsRedirection();
 
 app.UseRouting();
+
+// ===============================
+// Enable Session
+// ===============================
+app.UseSession();
 
 app.UseAuthorization();
 
 app.MapStaticAssets();
 
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
-
 
 app.Run();

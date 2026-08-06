@@ -11,7 +11,6 @@ namespace BloodDonationSystem.Data
 
         }
 
-
         public DbSet<Donor> Donors { get; set; }
 
         public DbSet<BloodRequest> BloodRequests { get; set; }

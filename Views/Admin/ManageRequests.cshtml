@@ -1,56 +1,144 @@
+@model List<BloodDonationSystem.Models.BloodRequest>
+
 @{
     ViewData["Title"] = "Manage Requests";
 }
 
+
 <div class="container py-5">
+
 
     <h2 class="text-danger mb-4">
         Manage Blood Requests
     </h2>
 
+
+
     <table class="table table-bordered table-hover shadow">
+
 
         <thead class="table-danger">
 
             <tr>
+
                 <th>ID</th>
+
                 <th>Patient</th>
+
                 <th>Blood Group</th>
+
                 <th>Units</th>
+
                 <th>Hospital</th>
+
+                <th>City</th>
+
+                <th>Priority</th>
+
+                <th>Contact</th>
+
                 <th>Action</th>
+
+                <th>Status</th>
+
+
             </tr>
 
         </thead>
 
+
+
         <tbody>
 
-            <tr>
-                <td>1</td>
-                <td>Raj Patel</td>
-                <td>O+</td>
-                <td>2</td>
-                <td>City Hospital</td>
-                <td>
-                    <button class="btn btn-success btn-sm">Approve</button>
-                    <button class="btn btn-danger btn-sm">Delete</button>
-                </td>
-            </tr>
+
+        @foreach(var request in Model)
+        {
 
             <tr>
-                <td>2</td>
-                <td>Anjali Shah</td>
-                <td>A-</td>
-                <td>1</td>
-                <td>Apollo Hospital</td>
+
+
                 <td>
-                    <button class="btn btn-success btn-sm">Approve</button>
-                    <button class="btn btn-danger btn-sm">Delete</button>
+                    @request.Id
                 </td>
+
+
+                <td>
+                    @request.PatientName
+                </td>
+
+
+                <td>
+                    @request.BloodGroup
+                </td>
+
+
+                <td>
+                     @request.UnitsRequired
+                </td>
+
+
+                <td>
+                    @request.HospitalName
+                </td>
+
+
+                <td>
+                    @request.City
+                </td>
+
+
+                <td>
+                    @request.Priority
+                </td>
+
+
+                <td>
+                    @request.ContactNumber
+                </td>
+
+                <td>
+                    @request.Status
+                </td>
+
+
+
+                <td>
+
+
+                    <a asp-controller="Admin"
+                       asp-action="ApproveRequest"
+                       asp-route-id="@request.Id"
+                       class="btn btn-success btn-sm">
+
+                        Approve
+
+                    </a>
+
+
+                    <a asp-controller="Admin"
+                       asp-action="DeleteRequest"
+                       asp-route-id="@request.Id"
+                       class="btn btn-danger btn-sm"
+                       onclick="return confirm('Delete this request?')">
+
+                        Delete
+
+                    </a>
+
+
+                </td>
+
+
             </tr>
+
+        }
+
 
         </tbody>
 
+
     </table>
+
+
 
 </div>

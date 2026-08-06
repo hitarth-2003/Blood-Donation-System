@@ -1,8 +1,9 @@
 @model BloodDonationSystem.Models.AdminDashboardViewModel
 
 @{
-    ViewData["Title"] = "Dashboard";
+    ViewData["Title"] = "Admin Dashboard";
 }
+
 
 <div class="container py-5">
 
@@ -10,74 +11,164 @@
         Admin Dashboard
     </h1>
 
+
     <div class="row">
 
-        <div class="col-md-3 mb-4">
-            <div class="card text-center shadow">
-                <div class="card-body">
-                    <h2 class="text-danger">@Model.TotalDonors</h2>
-                    <p>Total Donors</p>
-                </div>
-            </div>
-        </div>
+
+        <!-- Total Donors -->
 
         <div class="col-md-3 mb-4">
-            <div class="card text-center shadow">
-                <div class="card-body">
-                    <h2 class="text-danger">@Model.TotalRequests</h2>
-                    <p>Blood Requests</p>
+
+            <a asp-controller="Admin"
+               asp-action="ManageDonors"
+               style="text-decoration:none;">
+
+                <div class="card shadow text-center p-4">
+
+                    <h2 class="text-danger">
+                        @Model.TotalDonors
+                    </h2>
+
+                    <h5>
+                        Total Donors
+                    </h5>
+
                 </div>
-            </div>
+
+            </a>
+
         </div>
 
-        <div class="col-md-3 mb-4">
-            <div class="card text-center shadow">
-                <div class="card-body">
-                    <h2 class="text-danger">@Model.TotalContacts</h2>
-                    <p>Contact Messages</p>
-                </div>
-            </div>
-        </div>
+
+
+        <!-- Blood Requests -->
 
         <div class="col-md-3 mb-4">
-            <div class="card text-center shadow">
-                <div class="card-body">
-                    <h2 class="text-danger">8</h2>
-                    <p>Blood Groups</p>
+
+            <a asp-controller="Admin"
+               asp-action="ManageRequests"
+               style="text-decoration:none;">
+
+                <div class="card shadow text-center p-4">
+
+                    <h2 class="text-danger">
+                        @Model.TotalRequests
+                    </h2>
+
+                    <h5>
+                        Blood Requests
+                    </h5>
+
                 </div>
-            </div>
+
+            </a>
+
         </div>
+
+
+
+        <!-- Contacts -->
+
+        <div class="col-md-3 mb-4">
+
+            <a asp-controller="Admin"
+               asp-action="Contacts"
+               style="text-decoration:none;">
+
+                <div class="card shadow text-center p-4">
+
+                    <h2 class="text-danger">
+                        @Model.TotalContacts
+                    </h2>
+
+                    <h5>
+                        Contact Messages
+                    </h5>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- Blood Groups -->
+
+        <div class="col-md-3 mb-4">
+
+            <div class="card shadow text-center p-4">
+
+
+                <h2 class="text-danger">
+                    8
+                </h2>
+
+                <h5>
+                    Blood Groups
+                </h5>
+
+
+            </div>
+
+        </div>
+
 
     </div>
 
-    <div class="mt-5">
 
-        <a asp-controller="Admin"
-           asp-action="Donors"
-           class="btn btn-danger me-2">
-            Manage Donors
-        </a>
 
-        <a asp-controller="Admin"
-           asp-action="Requests"
-           class="btn btn-dark me-2">
-            Manage Requests
-        </a>
+    <hr class="my-5">
 
-        <a asp-controller="Admin"
-           asp-action="Contacts"
-           class="btn btn-success">
-            Contact Messages
-        </a>
 
-        <a asp-controller="Admin"
-   asp-action="Logout"
-   class="btn btn-dark">
+    <h3 class="text-danger mb-4">
+        Quick Actions
+    </h3>
 
-    Logout
 
-</a>
+    <div class="row">
+
+
+        <div class="col-md-4 mb-3">
+
+            <a asp-controller="Admin"
+               asp-action="ManageDonors"
+               class="btn btn-danger w-100 p-3">
+
+                Manage Donors
+
+            </a>
+
+        </div>
+
+
+        <div class="col-md-4 mb-3">
+
+            <a asp-controller="Admin"
+               asp-action="ManageRequests"
+               class="btn btn-dark w-100 p-3">
+
+                Manage Requests
+
+            </a>
+
+        </div>
+
+
+        <div class="col-md-4 mb-3">
+
+            <a asp-controller="Admin"
+               asp-action="Contacts"
+               class="btn btn-success w-100 p-3">
+
+                View Messages
+
+            </a>
+
+        </div>
+
 
     </div>
+
 
 </div>

@@ -28,22 +28,23 @@ namespace BloodDonationSystem.Controllers
         // ==========================
         // Submit Blood Request
         // ==========================
-        [HttpPost]
-        public IActionResult RequestBlood(BloodRequest request)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.BloodRequests.Add(request);
+ [HttpPost]
+public IActionResult RequestBlood(BloodRequest request)
+{
+    ModelState.Remove("Status");
 
-                _context.SaveChanges();
+    request.Status = "Pending";
 
+    if (!ModelState.IsValid)
+    {
+        return View(request);
+    }
 
-                return RedirectToAction("Success");
-            }
+    _context.BloodRequests.Add(request);
+    _context.SaveChanges();
 
-
-            return View(request);
-        }
+    return RedirectToAction("Success");
+}
 
 
 
@@ -120,66 +121,70 @@ namespace BloodDonationSystem.Controllers
             return View(donors.ToList());
         }
 
+
+
         // ==========================
-// Edit Blood Request GET
-// ==========================
-public IActionResult Edit(int id)
-{
-    var request = _context.BloodRequests
-                          .FirstOrDefault(x => x.Id == id);
+        // Edit Blood Request GET
+        // ==========================
+        public IActionResult Edit(int id)
+        {
+            var request = _context.BloodRequests
+                                  .FirstOrDefault(x => x.Id == id);
 
-    if(request == null)
-    {
-        return NotFound();
-    }
+            if (request == null)
+            {
+                return NotFound();
+            }
 
-    return View(request);
-}
-
-
-
-// ==========================
-// Edit Blood Request POST
-// ==========================
-[HttpPost]
-public IActionResult Edit(BloodRequest request)
-{
-    if(ModelState.IsValid)
-    {
-        _context.BloodRequests.Update(request);
-        _context.SaveChanges();
-
-        return RedirectToAction("Requests");
-    }
-
-    return View(request);
-}
+            return View(request);
+        }
 
 
 
 
-// ==========================
-// Delete Blood Request
-// ==========================
-public IActionResult Delete(int id)
-{
-    var request = _context.BloodRequests
-                          .FirstOrDefault(x => x.Id == id);
+        // ==========================
+        // Edit Blood Request POST
+        // ==========================
+        [HttpPost]
+        public IActionResult Edit(BloodRequest request)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.BloodRequests.Update(request);
+
+                _context.SaveChanges();
+
+                return RedirectToAction("Requests");
+            }
+
+            return View(request);
+        }
 
 
-    if(request == null)
-    {
-        return NotFound();
-    }
 
 
-    _context.BloodRequests.Remove(request);
+        // ==========================
+        // Delete Blood Request
+        // ==========================
+        public IActionResult Delete(int id)
+        {
+            var request = _context.BloodRequests
+                                  .FirstOrDefault(x => x.Id == id);
 
-    _context.SaveChanges();
+
+            if (request == null)
+            {
+                return NotFound();
+            }
 
 
-    return RedirectToAction("Requests");
-}
+            _context.BloodRequests.Remove(request);
+
+            _context.SaveChanges();
+
+
+            return RedirectToAction("Requests");
+        }
 
     }
 }

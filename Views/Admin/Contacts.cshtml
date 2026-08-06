@@ -1,0 +1,67 @@
+@model IEnumerable<BloodDonationSystem.Models.Contact>
+
+@{
+    ViewData["Title"] = "Contact Messages";
+}
+
+<div class="container py-5">
+
+    <h2 class="text-danger mb-4">
+        Contact Messages
+    </h2>
+
+    <table class="table table-bordered table-hover shadow">
+
+        <thead class="table-danger">
+
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Message</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        @foreach(var contact in Model)
+        {
+            <tr>
+
+                <td>@contact.Id</td>
+
+                <td>@contact.Name</td>
+
+                <td>@contact.Email</td>
+
+                <td>@contact.Mobile</td>
+
+                <td>@contact.Message</td>
+
+                <td>@contact.CreatedDate.ToString("dd-MM-yyyy")</td>
+
+                <td>
+
+                    <a asp-action="DeleteContact"
+                       asp-route-id="@contact.Id"
+                       class="btn btn-danger btn-sm"
+                       onclick="return confirm('Delete this message?')">
+
+                        Delete
+
+                    </a>
+
+                </td>
+
+            </tr>
+        }
+
+        </tbody>
+
+    </table>
+
+</div>
